@@ -1,6 +1,6 @@
 # finance-go
 
-[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/piquette/finance-go) [![Build Status](https://travis-ci.org/piquette/finance-go.svg?branch=master)](https://travis-ci.org/piquette/finance-go) [![Coverage Status](https://coveralls.io/repos/github/piquette/finance-go/badge.svg?branch=master)](https://coveralls.io/github/piquette/finance-go?branch=master)
+[![GoDoc](http://img.shields.io/badge/godoc-reference-blue.svg)](http://godoc.org/github.com/TraderWithPython/finance-go) [![Build Status](https://travis-ci.org/piquette/finance-go.svg?branch=master)](https://travis-ci.org/piquette/finance-go) [![Coverage Status](https://coveralls.io/repos/github/piquette/finance-go/badge.svg?branch=master)](https://coveralls.io/github/piquette/finance-go?branch=master)
 
 ## Summary
 
@@ -10,19 +10,19 @@ Check out the [qtrn cli application][qtrn], which is intended as a living exampl
 
 ### Features
 
-Description | Source
---- | ---
-Quote(s) | Yahoo finance
-Equity quote(s) | Yahoo finance
-Index quote(s) | Yahoo finance
-Option quote(s) | Yahoo finance
-Forex pair quote(s) | Yahoo finance
-Cryptocurrency pair quote(s) | Yahoo finance
-Futures quote(s) | Yahoo finance
-ETF quote(s) | Yahoo finance
-Mutual fund quote(s) | Yahoo finance
-Historical quotes | Yahoo finance
-Options straddles | Yahoo finance
+| Description                  | Source        |
+| ---------------------------- | ------------- |
+| Quote(s)                     | Yahoo finance |
+| Equity quote(s)              | Yahoo finance |
+| Index quote(s)               | Yahoo finance |
+| Option quote(s)              | Yahoo finance |
+| Forex pair quote(s)          | Yahoo finance |
+| Cryptocurrency pair quote(s) | Yahoo finance |
+| Futures quote(s)             | Yahoo finance |
+| ETF quote(s)                 | Yahoo finance |
+| Mutual fund quote(s)         | Yahoo finance |
+| Historical quotes            | Yahoo finance |
+| Options straddles            | Yahoo finance |
 
 ## Documentation
 
@@ -35,7 +35,7 @@ For now, for details on all the functionality in this library, see the [GoDoc][g
 This project supports modules and Go 1.13+. Add `finance-go` to your own project the usual way -
 
 ```sh
-go get github.com/piquette/finance-go
+go get github.com/TraderWithPython/finance-go
 ```
 
 ## Usage example
@@ -43,10 +43,11 @@ go get github.com/piquette/finance-go
 Library usage is meant to be very specific about the user's intentions.
 
 ### Quote
+
 ```go
 q, err := quote.Get("AAPL")
 if err != nil {
-  // Uh-oh.  
+  // Uh-oh.
   panic(err)
 }
 
@@ -55,10 +56,11 @@ fmt.Println(q)
 ```
 
 ### Equity quote (more fields)
+
 ```go
 q, err := equity.Get("AAPL")
 if err != nil {
-  // Uh-oh.  
+  // Uh-oh.
   panic(err)
 }
 
@@ -67,6 +69,7 @@ fmt.Println(q)
 ```
 
 ### Historical quotes (OHLCV)
+
 ```go
 params := &chart.Params{
   Symbol:   "TWTR",
@@ -99,9 +102,11 @@ The test suite needs testify's `require` package to run:
 It also depends on a running instance of a test server [finance-mock], so make sure to fetch that project and run the application from another terminal session ([finance-mock's README][finance-mock] contains more information).
 
 ### Docker
+
 ```sh
   docker run -p 12111:12111 piquette/finance-mock:latest
 ```
+
 ### Brew
 
     brew tap piquette/finance-mock
@@ -129,13 +134,14 @@ For any requests, bug or comments, please [open an issue][issues] or [submit a
 pull request][pulls]. Also please email or tweet me as needed.
 
 ## Notes
+
 - Yahoo changes their finance APIs without warning, which is their right to do so. However, its annoying and leads to some instability in this project..
 - Big shoutout to Stripe and the team working on the [stripe-go][stripe] project, I took a lot of library design / implementation hints from them.
 
-[godoc]: http://godoc.org/github.com/piquette/finance-go
-[issues]: https://github.com/piquette/finance-go/issues/new
+[godoc]: http://godoc.org/github.com/TraderWithPython/finance-go
+[issues]: https://github.com/TraderWithPython/finance-go/issues/new
 [qtrn]: https://github.com/piquette/qtrn
-[pulls]: https://github.com/piquette/finance-go/pulls
+[pulls]: https://github.com/TraderWithPython/finance-go/pulls
 [finance-mock]: https://github.com/piquette/finance-mock
 [stripe]: https://github.com/stripe/stripe-go
 [api-docs]: https://piquette.io/projects/finance-go/

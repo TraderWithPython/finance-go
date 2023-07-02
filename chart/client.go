@@ -3,10 +3,10 @@ package chart
 import (
 	"context"
 
-	finance "github.com/piquette/finance-go"
-	"github.com/piquette/finance-go/datetime"
-	form "github.com/piquette/finance-go/form"
-	"github.com/piquette/finance-go/iter"
+	finance "github.com/TraderWithPython/finance-go"
+	"github.com/TraderWithPython/finance-go/datetime"
+	form "github.com/TraderWithPython/finance-go/form"
+	"github.com/TraderWithPython/finance-go/iter"
 	"github.com/shopspring/decimal"
 )
 
